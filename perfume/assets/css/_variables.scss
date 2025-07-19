@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'larkin';
+    src: url(../fonts/Larken/Larken-Bold.woff);
+}
+@font-face {
+    font-family: 'hellix-regular';
+    src: url(../fonts/Hellix/Hellix-Regular.woff);
+}
+@font-face {
+    font-family: 'hellix-medium';
+    src: url(../fonts/Hellix/Hellix-Medium.woff);
+}
+@font-face {
+    font-family: 'hellix-bold';
+    src: url(../fonts/Hellix/Hellix-Bold.ttf);
+}
+
+$heading-font: 'larkin';
+$body-font: 'hellix-medium';
+$light-font: 'hellix-regular';
+$bold-font: 'hellix-bold';
+
+$primary-color: #b32541;
+$secondary-color: #991e3618;
+$black: #060606;
+$white: #fff;
