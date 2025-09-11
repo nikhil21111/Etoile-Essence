@@ -8,7 +8,7 @@
 html.lenis {
     height: auto;
   }
-  
+
 .lenis.lenis-smooth {
 scroll-behavior: auto;
 }
@@ -743,6 +743,87 @@ footer{
                 &:hover{
                     color: $white;
                 }
+            }
+        }
+    }
+}
+
+/* New Sections Styling */
+.section-padding {
+    padding: 5vw 10vw;
+    @media (max-width: 1500px) {
+        padding: 4vw;
+    }
+    @media (max-width: 991px) {
+        padding: 3rem 1rem;
+    }
+}
+
+.story-section {
+    .story-content {
+        max-width: 800px;
+        margin: auto;
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+            @media (max-width: 767px) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.ingredients-section {
+    background-color: $secondary-color;
+    .ingredient-card {
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+        height: 100%;
+        &:hover {
+            transform: translateY(-10px);
+        }
+        .ingredient-name {
+            font-family: $heading-font;
+            font-size: 1.5rem;
+            color: $primary-color;
+            margin-bottom: 0.5rem;
+        }
+        .ingredient-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+.reviews-section {
+    .reviews-slider-wrapper {
+        max-width: 800px;
+        margin: auto;
+        .review-slide {
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+
+            .review-text {
+                font-style: italic;
+                font-size: 1.2rem;
+                color: #555;
+                margin-bottom: 1rem;
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
+            }
+            .reviewer-name {
+                font-family: $bold-font;
+                font-size: 1rem;
+                text-align: right;
+                color: $primary-color;
             }
         }
     }

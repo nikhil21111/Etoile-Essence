@@ -221,6 +221,7 @@ header nav .menu .hamburger.close .line3 {
 .hero-section .sticy-wrapper {
   overflow-x: clip;
   width: 100%;
+  position: -webkit-sticky;
   position: sticky;
   z-index: 0;
   top: 0;
@@ -841,4 +842,90 @@ footer .fotter-bottom .links a {
 }
 footer .fotter-bottom .links a:hover {
   color: #fff;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* New Sections Styling */
+.section-padding {
+  padding: 5vw 10vw;
+}
+@media (max-width: 1500px) {
+  .section-padding {
+    padding: 4vw;
+  }
+}
+@media (max-width: 991px) {
+  .section-padding {
+    padding: 3rem 1rem;
+  }
+}
+
+.story-section .story-content {
+  max-width: 800px;
+  margin: auto;
+}
+.story-section .story-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+@media (max-width: 767px) {
+  .story-section .story-content p {
+    font-size: 1rem;
+  }
+}
+
+.ingredients-section {
+  background-color: rgba(153, 30, 54, 0.0941176471);
+}
+.ingredients-section .ingredient-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  height: 100%;
+}
+.ingredients-section .ingredient-card:hover {
+  transform: translateY(-10px);
+}
+.ingredients-section .ingredient-card .ingredient-name {
+  font-family: "larkin";
+  font-size: 1.5rem;
+  color: #b32541;
+  margin-bottom: 0.5rem;
+}
+.ingredients-section .ingredient-card .ingredient-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.reviews-section .reviews-slider-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+.reviews-section .reviews-slider-wrapper .review-slide {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+}
+.reviews-section .reviews-slider-wrapper .review-slide .review-text {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .reviews-section .reviews-slider-wrapper .review-slide .review-text {
+    font-size: 1rem;
+  }
+}
+.reviews-section .reviews-slider-wrapper .review-slide .reviewer-name {
+  font-family: "hellix-bold";
+  font-size: 1rem;
+  text-align: right;
+  color: #b32541;
+}
+
+/*# sourceMappingURL=style.css.map */
