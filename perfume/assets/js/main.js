@@ -31,6 +31,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   requestAnimationFrame(raf);
+
+  // 🍔 Hamburger menu toggle
+  $(".hamburger").click(function(){
+    $(".hamburger").toggleClass("close");
+    $(".mobile-menu").fadeToggle();
+  });
 });
 
 
