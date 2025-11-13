@@ -31,12 +31,73 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   requestAnimationFrame(raf);
+
+  // 🍔 Hamburger menu toggle
+  $(".hamburger").click(function(){
+    $(".hamburger").toggleClass("close");
+    $(".mobile-menu").fadeToggle();
+  });
 });
 
 
 // 🟢 GSAP Scroll Animations Start Here
 gsap.registerPlugin(ScrollTrigger);
 let master = gsap.timeline();
+
+// ✨ Shared Animation Functions (used in both desktop and mobile)
+// These functions are the same regardless of screen size
+
+// ✨ Story Section Animations
+let section3 = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.story-section',
+      start: "top 80%",
+      end: "bottom bottom",
+      scrub: true,
+      ease: "power1.out",
+    }
+  });
+  tl.from(".story-section .heading, .story-section .sub-heading, .story-section .story-content", {
+    opacity: 0,
+    y: 50,
+    stagger: 0.2,
+  });
+}
+
+// ✨ Ingredients Section Animations
+let ingredients = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.ingredients-section',
+      start: 'top 80%',
+      end: 'bottom bottom',
+      scrub: true,
+    },
+  });
+  tl.from('.ingredient-card', {
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+  });
+};
+
+// ✨ Reviews Section Animations
+let reviews = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.reviews-section',
+      start: 'top 80%',
+      end: 'bottom bottom',
+      scrub: true,
+    },
+  });
+  tl.from('.review-slide', {
+    x: 100,
+    opacity: 0,
+    stagger: 0.2,
+  });
+};
 
 // 📱 Responsive ScrollTrigger Animations
 ScrollTrigger.matchMedia({
@@ -135,58 +196,6 @@ ScrollTrigger.matchMedia({
       });
     }
 
-    // ✨ Section 3: Story Section Animations
-    let section3 = () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.story-section',
-          start: "top 80%",
-          end: "bottom bottom",
-          scrub: true,
-          ease: "power1.out",
-        }
-      });
-      tl.from(".story-section .heading, .story-section .sub-heading, .story-section .story-content", {
-        opacity: 0,
-        y: 50,
-        stagger: 0.2,
-      });
-    }
-
-    // ✨ Ingredients Section Animations
-    let ingredients = () => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.ingredients-section',
-                start: 'top 80%',
-                end: 'bottom bottom',
-                scrub: true,
-            },
-        });
-        tl.from('.ingredient-card', {
-            y: 100,
-            opacity: 0,
-            stagger: 0.2,
-        });
-    };
-
-    // ✨ Reviews Section Animations
-    let reviews = () => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.reviews-section',
-                start: 'top 80%',
-                end: 'bottom bottom',
-                scrub: true,
-            },
-        });
-        tl.from('.review-slide', {
-            x: 100,
-            opacity: 0,
-            stagger: 0.2,
-        });
-    };
-
     // 🧠 Add all sections to master timeline
     master.add(section1).add(section2).add(section3).add(ingredients).add(reviews).add(section4);
   },
@@ -268,58 +277,6 @@ ScrollTrigger.matchMedia({
         backgroundSize: '100%'
       });
     }
-
-    // ✨ Section 3: Story Section Animations
-    let section3 = () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.story-section',
-          start: "top 80%",
-          end: "bottom bottom",
-          scrub: true,
-          ease: "power1.out",
-        }
-      });
-      tl.from(".story-section .heading, .story-section .sub-heading, .story-section .story-content", {
-        opacity: 0,
-        y: 50,
-        stagger: 0.2,
-      });
-    }
-
-    // ✨ Ingredients Section Animations
-    let ingredients = () => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.ingredients-section',
-                start: 'top 80%',
-                end: 'bottom bottom',
-                scrub: true,
-            },
-        });
-        tl.from('.ingredient-card', {
-            y: 100,
-            opacity: 0,
-            stagger: 0.2,
-        });
-    };
-
-    // ✨ Reviews Section Animations
-    let reviews = () => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.reviews-section',
-                start: 'top 80%',
-                end: 'bottom bottom',
-                scrub: true,
-            },
-        });
-        tl.from('.review-slide', {
-            x: 100,
-            opacity: 0,
-            stagger: 0.2,
-        });
-    };
 
     // 🔗 Add all mobile sections to master timeline
     master.add(section1).add(section2).add(section3).add(ingredients).add(reviews).add(section4);
