@@ -62,18 +62,12 @@ a {
 }
 
 .solid-btn, .wt-btn, .outline-btn {
-  background-color: #b32541;
-  color: #fff !important;
   padding: 0.9rem 2.2rem;
   border-radius: 2rem;
   font-size: 1.3rem;
   border: 1px solid #b32541;
   transition: 0.2s;
-}
-.solid-btn:hover, .wt-btn:hover, .outline-btn:hover {
-  background-color: transparent;
-  color: #b32541 !important;
-  box-shadow: 0 0 10px rgba(109, 90, 230, 0.231372549);
+  color: #fff !important;
 }
 @media (max-width: 767px) {
   .solid-btn, .wt-btn, .outline-btn {
@@ -82,14 +76,23 @@ a {
   }
 }
 
-.wt-btn, .outline-btn {
+.solid-btn {
+  background-color: #b32541;
+}
+.solid-btn:hover {
+  background-color: transparent;
+  color: #b32541 !important;
+  box-shadow: 0 0 10px rgba(109, 90, 230, 0.231372549);
+}
+
+.wt-btn {
   background-color: #fff;
   color: #b32541 !important;
   display: inline-block;
   padding: 0.8rem 2.2rem;
   border: 1px solid #fff;
 }
-.wt-btn:hover, .outline-btn:hover {
+.wt-btn:hover {
   background-color: transparent;
   color: #fff !important;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.231372549);
@@ -97,11 +100,13 @@ a {
 
 .outline-btn {
   border: 1px solid #b32541;
-  color: #b32541;
+  color: #b32541 !important;
   background: transparent;
 }
 .outline-btn:hover {
   background-color: #b32541;
+  color: #fff !important;
+  box-shadow: 0 0 10px rgba(109, 90, 230, 0.231372549);
 }
 
 .heading {
@@ -122,6 +127,21 @@ a {
 
 .colored {
   color: #b32541;
+}
+
+/* Responsive padding utility for sections */
+.responsive-section-padding {
+  padding: 5vw 10vw;
+}
+@media (max-width: 1500px) {
+  .responsive-section-padding {
+    padding: 4vw;
+  }
+}
+@media (max-width: 991px) {
+  .responsive-section-padding {
+    padding: 3rem 1rem;
+  }
 }
 
 header {
@@ -488,8 +508,11 @@ header nav .menu .hamburger.close .line3 {
 
 .feature-section {
   min-height: 100vh;
-  padding: 5vw 10vw;
   overflow-x: clip;
+}
+.feature-section,
+.feature-section {
+  padding: 5vw 10vw;
 }
 @media (max-width: 1500px) {
   .feature-section {
@@ -579,9 +602,11 @@ header nav .menu .hamburger.close .line3 {
 }
 
 .notes-section {
-  padding: 5vw 10vw;
   min-height: 100vh;
   background-color: rgba(153, 30, 54, 0.0941176471);
+}
+.notes-section {
+  padding: 5vw 10vw;
 }
 @media (max-width: 1500px) {
   .notes-section {
@@ -742,6 +767,9 @@ header nav .menu .hamburger.close .line3 {
 footer {
   background-color: #b32541;
   color: #fff;
+}
+footer,
+footer {
   padding: 0 10vw;
 }
 @media (max-width: 1500px) {
