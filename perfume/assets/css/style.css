@@ -508,11 +508,8 @@ header nav .menu .hamburger.close .line3 {
 
 .feature-section {
   min-height: 100vh;
-  overflow-x: clip;
-}
-.feature-section,
-.feature-section {
   padding: 5vw 10vw;
+  overflow-x: clip;
 }
 @media (max-width: 1500px) {
   .feature-section {
@@ -602,11 +599,9 @@ header nav .menu .hamburger.close .line3 {
 }
 
 .notes-section {
+  padding: 5vw 10vw;
   min-height: 100vh;
   background-color: rgba(153, 30, 54, 0.0941176471);
-}
-.notes-section {
-  padding: 5vw 10vw;
 }
 @media (max-width: 1500px) {
   .notes-section {
@@ -767,9 +762,6 @@ header nav .menu .hamburger.close .line3 {
 footer {
   background-color: #b32541;
   color: #fff;
-}
-footer,
-footer {
   padding: 0 10vw;
 }
 @media (max-width: 1500px) {
